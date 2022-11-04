@@ -1,0 +1,12 @@
+@import "../components/project/article.scss";
+@import "../components/project/search.scss";
+@import "../components/project/lightbox.scss";
+
+.app-project-main {
+  position: relative;
+  .app-project-section {
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+  }
+}

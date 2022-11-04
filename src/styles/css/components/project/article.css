@@ -1,0 +1,168 @@
+.app-project-article {
+  display: flex;
+  flex-direction: row;
+  box-shadow: 0px 0.5em 5px -0.5em;
+  padding-bottom: 3em;
+}
+.app-project-article:nth-last-child(-n+1) {
+  box-shadow: 0 0 0 0;
+  padding-bottom: 0;
+}
+.app-project-article .app-project-article-preview-container {
+  position: relative;
+  border-radius: 0.5em;
+  overflow: hidden;
+  min-width: 400px;
+  max-width: 500px;
+  height: 300px;
+  box-shadow: 0 0 5px 1px;
+}
+.app-project-article .app-project-article-preview-container:hover .app-project-article-preview-zoom-in-container {
+  opacity: 1;
+}
+.app-project-article .app-project-article-preview-container:hover .app-project-article-preview-zoom-in-container .app-project-article-preview-zoom-in-icon {
+  display: inline;
+}
+.app-project-article .app-project-article-preview-container .app-project-article-preview {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  box-shadow: 0 0 5px 1px #1e1e1e;
+}
+.app-project-article .app-project-article-preview-container .app-project-article-preview-zoom-in-container {
+  transition: 0.5s;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.app-project-article .app-project-article-preview-container .app-project-article-preview-zoom-in-container .app-project-article-preview-zoom-in-icon {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 40px;
+  cursor: pointer;
+}
+.app-project-article .app-project-article-preview-container .app-project-article-preview-zoom-in-container .app-project-article-preview-zoom-in-icon path {
+  fill: #dcdcdc;
+}
+.app-project-article .app-project-article-information {
+  padding: 0 1em;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+.app-project-article .app-project-article-information .app-project-article-information-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap-reverse;
+  margin-bottom: 1em;
+  gap: 1em;
+}
+.app-project-article .app-project-article-information .app-project-article-information-header .app-project-article-title {
+  text-align: center;
+  font-weight: 500;
+  font-size: 23px;
+  font-style: italic;
+  margin: 0;
+}
+.app-project-article .app-project-article-information .app-project-article-information-header .app-project-article-created-date {
+  text-align: end;
+}
+.app-project-article .app-project-article-information .app-project-article-link-text {
+  font-style: italic;
+  margin: 1em 0;
+}
+.app-project-article .app-project-article-information .app-project-article-link-text:active {
+  font-weight: bold;
+}
+.app-project-article .app-project-article-information .app-project-article-link-text .app-project-article-link {
+  position: relative;
+  font-size: 20px;
+}
+.app-project-article .app-project-article-information .app-project-article-link-text .app-project-article-link:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+.app-project-article .app-project-article-information .app-project-article-link-text .app-project-article-link::after {
+  content: "";
+  background-color: gray;
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 1.5px;
+  bottom: 0;
+  left: 0;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+.app-project-article .app-project-article-information .app-project-article-description {
+  overflow: auto;
+  margin: 0;
+  margin-bottom: auto;
+  height: 45px;
+}
+.app-project-article .app-project-article-information .app-project-article-programming-language-list {
+  padding: 0;
+  margin: 0;
+  max-width: calc(100% - 75px);
+  list-style: none;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow: auto;
+  gap: 0.5em 1em;
+}
+.app-project-article .app-project-article-information .app-project-article-programming-language-list .app-project-article-programming-language-item {
+  font-weight: bold;
+  border-radius: 0.25em;
+  padding: 0.15em 1em;
+}
+.app-project-article .app-project-article-information .app-project-article-programming-language-list .app-project-article-programming-language-item.javascript {
+  background: #f0db4f;
+  color: #323330;
+}
+.app-project-article .app-project-article-information .app-project-article-programming-language-list .app-project-article-programming-language-item.html {
+  background: linear-gradient(90deg, #e34c26 55%, #f06529 55%);
+  color: #ffffff;
+}
+.app-project-article .app-project-article-information .app-project-article-programming-language-list .app-project-article-programming-language-item.css {
+  background: linear-gradient(90deg, #264de4 55%, #2965f1 55%);
+  color: #ffffff;
+}
+.app-project-article .app-project-article-information .app-project-article-programming-language-list .app-project-article-programming-language-item.scss {
+  background: #cc6699;
+  color: #ffffff;
+}
+.app-project-article .app-project-article-information .app-project-article-programming-language-list .app-project-article-programming-language-item.react {
+  background: #1c2c4c;
+  color: #00d8ff;
+}
+.app-project-article .app-project-article-information .app-project-article-programming-language-list .app-project-article-programming-language-item.redux {
+  background: #764abc;
+  color: #ffffff;
+}
+
+@media screen and (max-width: 1024px) {
+  .app-project-article {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .app-project-article .app-project-article-preview-container {
+    width: 100%;
+    display: flex;
+  }
+  .app-project-article .app-project-article-information {
+    padding: 0;
+  }
+}

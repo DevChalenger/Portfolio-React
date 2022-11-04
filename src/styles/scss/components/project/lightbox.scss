@@ -1,0 +1,27 @@
+.app-project-light-box-container {
+  position: fixed;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding-right: 1em;
+  background-color: rgba($color: #000000, $alpha: 0.5);
+  .app-project-light-box-picture {
+    max-height: 500px;
+    width: auto;
+    margin-top: 50px;
+    border-radius: 0.25em;
+    box-shadow: 0 0 5px 2px;
+  }
+  .app-project-light-box-zoom-off {
+    height: 50px;
+    align-self: end;
+    margin-top: -100px;
+    margin-right: 1em;
+    cursor: pointer;
+  }
+}

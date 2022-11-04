@@ -1,0 +1,38 @@
+@import "color.scss";
+@import "../components/loader.scss";
+
+@font-face {
+  font-family: Cormorant;
+  src: url("../../../assets/fonts/Cormorant-Regular.otf");
+}
+.app-container {
+  min-height: 100vh;
+  font-family: Cormorant;
+  font-size: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  .app-main-container {
+    margin: 1em 2em;
+  }
+}
+.night-mode {
+  background-color: $First-Color;
+  color: $Second-Color;
+  path {
+    fill: $Second-Color;
+  }
+  &::after {
+    background-color: $Second-Color;
+  }
+}
+.light-mode {
+  background-color: $Second-Color;
+  color: $First-Color;
+  path {
+    fill: $First-Color;
+  }
+  &::after {
+    background-color: $First-Color;
+  }
+}
