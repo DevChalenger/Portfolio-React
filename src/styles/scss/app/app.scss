@@ -12,13 +12,25 @@
   display: flex;
   flex-direction: column;
   gap: 1em;
+  position: relative;
+  .app-background {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100vw;
+    opacity: 0.5;
+  }
   .app-main-container {
+    z-index: 1;
     margin: 1em 2em;
   }
 }
 .night-mode {
   background-color: $First-Color;
   color: $Second-Color;
+  transition: background-color, color 0.5s;
   path {
     fill: $Second-Color;
   }
@@ -29,6 +41,7 @@
 .light-mode {
   background-color: $Second-Color;
   color: $First-Color;
+  transition: background-color, color 0.5s;
   path {
     fill: $First-Color;
   }

@@ -1,5 +1,6 @@
 .app-header {
   display: flex;
+  z-index: 1;
   justify-content: space-between;
   flex-direction: row;
   padding: 1em 2em;
@@ -32,7 +33,13 @@
       .app-header-nav-item {
         position: relative;
         font-size: 20px;
-
+        background: inherit;
+        &.current-page {
+          &::after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+          }
+        }
         &:hover::after {
           transform: scaleX(1);
           transform-origin: bottom left;

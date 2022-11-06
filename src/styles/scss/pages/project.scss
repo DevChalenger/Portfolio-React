@@ -5,8 +5,19 @@
 .app-project-main {
   position: relative;
   .app-project-section {
-    display: flex;
-    flex-direction: column;
-    gap: 3em;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 5em;
+  }
+}
+@media screen and (max-width: 500px) {
+  .app-project-main {
+    margin: 1em 1em !important;
+    .app-project-section {
+      gap: 2em;
+      display: flex;
+      flex-direction: column;
+    }
   }
 }

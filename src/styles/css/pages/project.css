@@ -1,21 +1,21 @@
 .app-project-article {
   display: flex;
-  flex-direction: row;
-  box-shadow: 0px 0.5em 5px -0.5em;
-  padding-bottom: 3em;
-}
-.app-project-article:nth-last-child(-n+1) {
-  box-shadow: 0 0 0 0;
-  padding-bottom: 0;
+  flex-direction: column;
+  max-width: 400px;
+  box-shadow: 0px 0em 5px 0em;
+  border-radius: 1.25em;
+  overflow: hidden;
+  justify-self: center;
+  background-color: white;
 }
 .app-project-article .app-project-article-preview-container {
   position: relative;
-  border-radius: 0.5em;
+  border-bottom: 0.75em;
   overflow: hidden;
   min-width: 400px;
   max-width: 500px;
-  height: 300px;
-  box-shadow: 0 0 5px 1px;
+  min-height: 200px;
+  box-shadow: 0 0 5px 2px #1e1e1e;
 }
 .app-project-article .app-project-article-preview-container:hover .app-project-article-preview-zoom-in-container {
   opacity: 1;
@@ -26,9 +26,6 @@
 .app-project-article .app-project-article-preview-container .app-project-article-preview {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  object-position: top;
-  box-shadow: 0 0 5px 1px #1e1e1e;
 }
 .app-project-article .app-project-article-preview-container .app-project-article-preview-zoom-in-container {
   transition: 0.5s;
@@ -54,8 +51,9 @@
   fill: #dcdcdc;
 }
 .app-project-article .app-project-article-information {
-  padding: 0 1em;
-  width: 100%;
+  color: #1e1e1e;
+  height: 300px;
+  padding: 1em;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -71,14 +69,11 @@
   gap: 1em;
 }
 .app-project-article .app-project-article-information .app-project-article-information-header .app-project-article-title {
-  text-align: center;
+  text-align: start;
   font-weight: 500;
   font-size: 23px;
   font-style: italic;
   margin: 0;
-}
-.app-project-article .app-project-article-information .app-project-article-information-header .app-project-article-created-date {
-  text-align: end;
 }
 .app-project-article .app-project-article-information .app-project-article-link-text {
   font-style: italic;
@@ -108,10 +103,7 @@
   transition: transform 0.25s ease-out;
 }
 .app-project-article .app-project-article-information .app-project-article-description {
-  overflow: auto;
   margin: 0;
-  margin-bottom: auto;
-  height: 45px;
 }
 .app-project-article .app-project-article-information .app-project-article-programming-language-list {
   padding: 0;
@@ -119,8 +111,7 @@
   max-width: calc(100% - 75px);
   list-style: none;
   display: flex;
-  flex-wrap: nowrap;
-  overflow: auto;
+  flex-wrap: wrap;
   gap: 0.5em 1em;
 }
 .app-project-article .app-project-article-information .app-project-article-programming-language-list .app-project-article-programming-language-item {
@@ -162,9 +153,6 @@
     width: 100%;
     display: flex;
   }
-  .app-project-article .app-project-article-information {
-    padding: 0;
-  }
 }
 .app-search-project-container {
   display: flex;
@@ -173,7 +161,7 @@
   padding: 1em;
   gap: 0.5em;
   align-items: center;
-  margin-bottom: 1em;
+  margin-bottom: 2em;
 }
 .app-search-project-container .app-search-project-label {
   font-weight: bold;
@@ -186,7 +174,7 @@
   font-size: 16px;
   padding-left: 0.5em;
   border-radius: 0.25em;
-  border: none;
+  border: 1px solid rgba(125, 125, 125, 0.5);
   outline: none;
   box-shadow: 0 0 0 0;
   transition: 0.3s;
@@ -227,7 +215,19 @@
   position: relative;
 }
 .app-project-main .app-project-section {
-  display: flex;
-  flex-direction: column;
-  gap: 3em;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 5em;
+}
+
+@media screen and (max-width: 500px) {
+  .app-project-main {
+    margin: 1em 1em !important;
+  }
+  .app-project-main .app-project-section {
+    gap: 2em;
+    display: flex;
+    flex-direction: column;
+  }
 }

@@ -1,0 +1,12 @@
+@import "../components/home/introductionHome.scss";
+
+.app-home-main {
+  .app-home-section {
+    padding-bottom: 1em;
+    box-shadow: 0px 0.5em 5px -0.5em;
+    &:nth-last-child(-n + 1) {
+      box-shadow: 0 0 0 0;
+      padding-bottom: 0;
+    }
+  }
+}

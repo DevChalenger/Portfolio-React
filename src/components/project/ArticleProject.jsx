@@ -1,11 +1,12 @@
 import { ReactComponent as ZoomIn } from "../../assets/SVG/zoom-in.svg";
+
 const ArticleProject = ({ data, setLightBox }) => {
   const today = new Date(data._createdAt)
-    .toLocaleDateString("fr-Fr")
+    .toLocaleDateString("en-En")
     .slice(0, 10);
-  console.log(data._preview);
+
   return (
-    <article className="app-project-article">
+    <article className={"app-project-article"}>
       <div className="app-project-article-preview-container">
         <img
           className="app-project-article-preview"
@@ -27,7 +28,6 @@ const ArticleProject = ({ data, setLightBox }) => {
       <div className="app-project-article-information">
         <header className="app-project-article-information-header">
           <h2 className="app-project-article-title">{data._title}</h2>
-          <p className="app-project-article-created-date">{today}</p>
         </header>
         <p className="app-project-article-description">{data._description}</p>
         <p className="app-project-article-link-text">
@@ -50,6 +50,7 @@ const ArticleProject = ({ data, setLightBox }) => {
             </li>
           ))}
         </ul>
+        <p className="app-project-article-created-date">{today}</p>
       </div>
     </article>
   );
