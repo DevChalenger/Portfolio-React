@@ -1,13 +1,13 @@
 import FormContact from "../components/contact/FormContact";
-import HeaderContact from "../components/contact/HeaderContact";
+import HeaderMain from "../components/HeaderMain";
 
 import "../styles/css/pages/contact.css";
 
 const Contact = () => {
   return (
     <main className="app-main-container app-contact-container">
+      <HeaderMain Title={"Contact"} />
       <section className="app-contact-section">
-        <HeaderContact />
         <FormContact />
       </section>
     </main>

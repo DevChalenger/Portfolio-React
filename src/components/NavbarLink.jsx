@@ -4,7 +4,7 @@ import useTheme from "../utils/Theme";
 const NavbarLink = ({ name, path }) => {
   const { currentTheme } = useTheme();
   const currentPath = useLocation().pathname;
-  console.log(currentPath === path);
+
   return (
     <li
       className={`app-header-nav-item ${currentTheme} ${

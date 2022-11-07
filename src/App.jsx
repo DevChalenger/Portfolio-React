@@ -20,7 +20,6 @@ const App = () => {
 
   return (
     <div className={`app-container ${currentTheme}`}>
-      <div className="app-background"></div>
       <HelmetProvider>
         <Router>
           <Header />
