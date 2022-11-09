@@ -1,5 +1,3 @@
-import { ReactComponent as ZoomIn } from "../../assets/SVG/zoom-in.svg";
-
 const ArticleProject = ({ data, setLightBox }) => {
   const today = new Date(data._createdAt)
     .toLocaleDateString("en-En")
@@ -13,17 +11,6 @@ const ArticleProject = ({ data, setLightBox }) => {
           src={require(`../../assets/project/${data._preview}.png`)}
           alt={data._title.toLowerCase() + "-picture"}
         />
-        <div className="app-project-article-preview-zoom-in-container">
-          <ZoomIn
-            className="app-project-article-preview-zoom-in-icon"
-            onClick={() =>
-              setLightBox({
-                isOpen: true,
-                picture: data._preview,
-              })
-            }
-          />
-        </div>
       </div>
       <div className="app-project-article-information">
         <header className="app-project-article-information-header">

@@ -15,40 +15,11 @@
   min-width: 400px;
   max-width: 500px;
   min-height: 200px;
-  box-shadow: 0 0 5px 2px #1e1e1e;
-}
-.app-project-article .app-project-article-preview-container:hover .app-project-article-preview-zoom-in-container {
-  opacity: 1;
-}
-.app-project-article .app-project-article-preview-container:hover .app-project-article-preview-zoom-in-container .app-project-article-preview-zoom-in-icon {
-  display: inline;
+  box-shadow: 0 0 5px 1px #1e1e1e;
 }
 .app-project-article .app-project-article-preview-container .app-project-article-preview {
   width: 100%;
   height: 100%;
-}
-.app-project-article .app-project-article-preview-container .app-project-article-preview-zoom-in-container {
-  transition: 0.5s;
-  opacity: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.4);
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-.app-project-article .app-project-article-preview-container .app-project-article-preview-zoom-in-container .app-project-article-preview-zoom-in-icon {
-  display: none;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  height: 40px;
-  cursor: pointer;
-}
-.app-project-article .app-project-article-preview-container .app-project-article-preview-zoom-in-container .app-project-article-preview-zoom-in-icon path {
-  fill: #dcdcdc;
 }
 .app-project-article .app-project-article-information {
   color: #1e1e1e;
@@ -141,6 +112,10 @@
 .app-project-article .app-project-article-information .app-project-article-programming-language-list .app-project-article-programming-language-item.redux {
   background: #764abc;
   color: #ffffff;
+}
+.app-project-article .app-project-article-information .app-project-article-created-date {
+  align-self: flex-end;
+  margin: 0;
 }
 
 @media screen and (max-width: 1024px) {

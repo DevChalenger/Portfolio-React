@@ -77,9 +77,3 @@
     background-color: #1e1e1e;
   }
 }
-.app-contact-container .app-contact-section {
-  margin-top: 1em;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}

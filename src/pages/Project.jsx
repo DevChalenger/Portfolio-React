@@ -22,7 +22,7 @@ const Project = () => {
     getProject();
   }, []);
 
-  return !data ? (
+  return data ? (
     <main className="app-main-container app-project-main">
       <HeaderMain Title={"Projects"} />
       <SearchProject setData={setData} initData={initData} />

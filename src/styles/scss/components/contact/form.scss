@@ -1,0 +1,84 @@
+@import "../../app/color.scss";
+.app-contact-form {
+  padding: 1.5em 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5em;
+  background-color: white;
+  color: $First-Color;
+  max-width: 230px;
+  min-width: 200px;
+  box-shadow: 0 0 3px 0.1px;
+  border-radius: 0.5em;
+
+  .app-contact-form-field-container {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    gap: 0.5em;
+
+    .app-contact-form-field-label {
+      font-weight: bold;
+      text-align: right;
+    }
+    .app-contact-form-field-input {
+      height: 30px;
+      padding-left: 0.75em;
+      width: 220px;
+    }
+    .app-contact-form-field-textarea {
+      padding: 0.75em;
+      max-width: 220px;
+      min-width: 220px;
+      min-height: 50px;
+      letter-spacing: 1px;
+      line-height: 1.5;
+    }
+    .app-contact-form-field-textarea,
+    .app-contact-form-field-input {
+      border-radius: 0.3em;
+
+      outline: none;
+      border: none;
+
+      box-shadow: 0 0 3px 0.1px;
+      transition: box-shadow 0.5s;
+      &.notValidate {
+        box-shadow: 0 0 4px 2px $Error-Color;
+      }
+      &.validate {
+        box-shadow: 0 0 4px 2px $Valid-Color;
+      }
+    }
+    .app-contact-form-field-error {
+      color: $Error-Color;
+      font-weight: bold;
+    }
+  }
+  .app-contact-form-button-container {
+    margin-top: 1em;
+    width: 100%;
+    .app-contact-form-button {
+      background-color: $First-Color;
+      color: $Second-Color;
+      padding: 0.6em 1em;
+      width: 100%;
+      border: none;
+      box-shadow: 0 0 4px 2px $Second-Color;
+      cursor: pointer;
+      border-radius: 0.35em;
+      &:active {
+        filter: contrast(0.9);
+      }
+    }
+  }
+}
+
+@keyframes sendButton {
+  from {
+    background-color: $First-Color;
+  }
+  to {
+  }
+}
