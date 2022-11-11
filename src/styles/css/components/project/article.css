@@ -24,6 +24,7 @@
 .app-project-article .app-project-article-information {
   color: #1e1e1e;
   padding: 1em;
+  height: 300px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;

@@ -1,13 +1,15 @@
 import React from "react";
 import "../styles/css/components/header.css";
+import useTheme from "../utils/Theme";
 import NavbarLink from "./NavbarLink";
 
 /**
  * @function Header
  */
 const Header = () => {
+  const { currentTheme } = useTheme();
   return (
-    <header className="app-header">
+    <header className={`app-header ${currentTheme}`}>
       <div className="app-header-title">
         <h1>Ilyas Boukhechem</h1>
         <span>Software React developer</span>

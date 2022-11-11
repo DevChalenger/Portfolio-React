@@ -21,7 +21,7 @@ const FormControl = ({
           {
             pattern:
               name === "name"
-                ? /^[a-zA-Z]*$/
+                ? /^[a-zA-Z ]*$/
                 : name === "email"
                 ? /^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/
                 : name === "subject"

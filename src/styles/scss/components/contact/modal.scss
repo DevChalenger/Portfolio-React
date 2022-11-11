@@ -1,0 +1,92 @@
+@import "../../app/color.scss";
+@keyframes sendAnim {
+  0% {
+    opacity: 1;
+    transform: translate(0%, 0%);
+  }
+  50% {
+    opacity: 1;
+    transform: translate(0%, 0%);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(400%, -300%);
+  }
+}
+
+@keyframes successAnim {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+.app-contact-form-modal-section {
+  position: fixed;
+  display: block;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba($color: #0a0f18, $alpha: 0.5);
+  color: $First-Color;
+  padding: 0 1em;
+  .app-contact-form-modal-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 0.5em;
+    padding: 1em;
+    box-shadow: 0 0 5px 1px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 250px;
+    width: 90%;
+    gap: 1em;
+    max-width: 350px;
+    background-color: white;
+    text-align: center;
+    .app-contact-form-modal-icon-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      width: 100%;
+      .app-contact-form-modal-icon-success-container {
+        opacity: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 3px solid $Valid-Color;
+        border-radius: 100%;
+        height: 60px;
+        transform: translate(0%, 100%);
+        width: 60px;
+        animation-name: successAnim;
+        animation-fill-mode: forwards;
+        animation-duration: 1s;
+        animation-delay: 1.5s;
+        .app-contact-form-modal-icon-success {
+          display: inline-block;
+          transform: rotate(45deg) translate(-10%, -10%);
+          height: 30px;
+          width: 15px;
+          border-bottom: 5px solid $Valid-Color;
+          border-right: 5px solid $Valid-Color;
+        }
+      }
+      .app-contact-form-modal-icon-send {
+        height: 50px;
+        transform: translate(400%, 400%);
+        animation-name: sendAnim;
+        animation-duration: 2s;
+      }
+    }
+  }
+}

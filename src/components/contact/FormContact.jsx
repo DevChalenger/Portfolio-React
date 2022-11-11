@@ -2,8 +2,8 @@ import { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import FormControl from "./FormControl";
 import { useForm } from "react-hook-form";
-
-const ContactForm = () => {
+import { useNavigate } from "react-router-dom";
+const ContactForm = ({ setIsSent }) => {
   const ref = useRef();
   const {
     register,
@@ -12,8 +12,11 @@ const ContactForm = () => {
     formState: { isSubmitted },
   } = useForm();
 
+  const navigate = useNavigate();
+
   const sendForm = (e) => {
     console.log("test");
+
     emailjs
       .sendForm(
         "service_4m33wxf",
@@ -22,12 +25,11 @@ const ContactForm = () => {
         "1RJFg6DDHkXRgs0Hz"
       )
       .then(
-        (result) => {
-          console.log(result.text);
+        () => {
+          setIsSent(true);
+          setTimeout(() => navigate("/"), 5000);
         },
-        (error) => {
-          console.log(error.text);
-        }
+        (error) => {}
       );
   };
 

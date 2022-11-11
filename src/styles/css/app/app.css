@@ -88,6 +88,10 @@
   font-family: Cormorant;
   src: url("../../../assets/fonts/Cormorant-Regular.otf");
 }
+* {
+  box-sizing: border-box;
+}
+
 .app-container {
   min-height: 100vh;
   font-family: Cormorant;
@@ -99,7 +103,7 @@
   width: 100%;
 }
 .app-container .app-main-container {
-  z-index: 1;
+  padding-top: 100px;
   margin: 1em 2em;
 }
 .app-container .app-main-container .app-main-header {
