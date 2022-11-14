@@ -7,7 +7,9 @@
 }
 * {
   box-sizing: border-box;
+  cursor: none;
 }
+
 .app-container {
   min-height: 100vh;
   font-family: Cormorant;
@@ -44,11 +46,9 @@
 }
 .night-mode {
   background-color: $First-Color;
+
   color: $Second-Color;
   transition: background-color, color 0.5s;
-  path {
-    fill: $Second-Color;
-  }
   &::after {
     background-color: $Second-Color;
   }
@@ -57,10 +57,29 @@
   background-color: $Second-Color;
   color: $First-Color;
   transition: background-color, color 0.5s;
-  path {
-    fill: $First-Color;
-  }
   &::after {
     background-color: $First-Color;
+  }
+}
+@media screen and (max-width: 800px) {
+  .app-container {
+    .app-main-container {
+      padding-top: 175px;
+    }
+  }
+}
+@media screen and (max-width: 525px) {
+  .app-container {
+    .app-main-container {
+      padding-top: 200px;
+    }
+  }
+}
+
+@media screen and (max-width: 325px) {
+  .app-container {
+    .app-main-container {
+      padding-top: 250px;
+    }
   }
 }

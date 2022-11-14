@@ -8,6 +8,9 @@ import SearchProject from "../components/project/SearchProject";
 import fetchAllProject from "../services/project/all.project";
 
 import "../styles/css/pages/project.css";
+import TitlePage from "../utils/TitlePage";
+
+import "aos/dist/aos.css";
 
 const Project = () => {
   const [data, setData] = useState();
@@ -24,6 +27,7 @@ const Project = () => {
 
   return data ? (
     <main className="app-main-container app-project-main">
+      <TitlePage title={"Projects"} />
       <HeaderMain Title={"Projects"} />
       <SearchProject setData={setData} initData={initData} />
 

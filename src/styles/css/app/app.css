@@ -1,6 +1,6 @@
 .app-loader-container {
   display: flex;
-  margin-top: auto;
+  padding-top: 40vh;
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -90,6 +90,7 @@
 }
 * {
   box-sizing: border-box;
+  cursor: none;
 }
 
 .app-container {
@@ -132,9 +133,6 @@
   color: #dcdcdc;
   transition: background-color, color 0.5s;
 }
-.night-mode path {
-  fill: #dcdcdc;
-}
 .night-mode::after {
   background-color: #dcdcdc;
 }
@@ -144,9 +142,22 @@
   color: #1e1e1e;
   transition: background-color, color 0.5s;
 }
-.light-mode path {
-  fill: #1e1e1e;
-}
 .light-mode::after {
   background-color: #1e1e1e;
+}
+
+@media screen and (max-width: 800px) {
+  .app-container .app-main-container {
+    padding-top: 175px;
+  }
+}
+@media screen and (max-width: 525px) {
+  .app-container .app-main-container {
+    padding-top: 200px;
+  }
+}
+@media screen and (max-width: 325px) {
+  .app-container .app-main-container {
+    padding-top: 250px;
+  }
 }

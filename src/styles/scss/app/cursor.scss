@@ -1,0 +1,31 @@
+@import "color.scss";
+.app-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  border: 3px solid;
+  border-radius: 100%;
+  box-shadow: 0 0 5px 1px $First-Color;
+  background-color: rgba($color: $First-Color, $alpha: 0.4);
+  transform: translate(-50%, -50%);
+  transition: width 0.5s, height 0.5s;
+  z-index: 10;
+  pointer-events: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .app-cursor-center {
+    height: 5px;
+    width: 5px;
+    border-radius: 100%;
+    background-color: inherit;
+    &.light {
+      background-color: $First-Color;
+    }
+    &.night {
+      background-color: $Second-Color;
+    }
+  }
+}

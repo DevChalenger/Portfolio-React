@@ -3,6 +3,7 @@ import emailjs from "@emailjs/browser";
 import FormControl from "./FormControl";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
+
 const ContactForm = ({ setIsSent }) => {
   const ref = useRef();
   const {
@@ -15,8 +16,6 @@ const ContactForm = ({ setIsSent }) => {
   const navigate = useNavigate();
 
   const sendForm = (e) => {
-    console.log("test");
-
     emailjs
       .sendForm(
         "service_4m33wxf",
@@ -88,6 +87,7 @@ const ContactForm = ({ setIsSent }) => {
             errors.message ? "notValidate" : isSubmitted ? "validate" : ""
           }`}
           id="app-contact-form-field-message"
+          maxLength={500}
           cols="30"
           rows="10"
         />

@@ -1,1 +1,28 @@
-@import "../app/color.scss";
+@import "../components/about/skills.scss";
+
+.app-about-main {
+  .app-about-section {
+    .app-about-article {
+      .app-about-article-header {
+        display: flex;
+        justify-content: center;
+        .app-about-article-title {
+          display: inline-block;
+          position: relative;
+          background: inherit;
+
+          &::after {
+            content: "";
+            position: absolute;
+            width: 300%;
+            border-radius: 10em;
+            opacity: 0.5;
+            height: 3px;
+            bottom: -6px;
+            left: -100%;
+          }
+        }
+      }
+    }
+  }
+}
