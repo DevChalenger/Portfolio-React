@@ -149,8 +149,4 @@
     justify-content: center;
     width: 100%;
   }
-  .app-project-article .app-project-article-preview-container {
-    width: 100%;
-    display: flex;
-  }
 }

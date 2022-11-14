@@ -5,42 +5,43 @@ import Loader from "../components/Loader";
 import ArticleProject from "../components/project/ArticleProject";
 import SearchProject from "../components/project/SearchProject";
 
-import fetchAllProject from "../services/project/all.project";
-
 import "../styles/css/pages/project.css";
 import TitlePage from "../utils/TitlePage";
 
-import "aos/dist/aos.css";
+import { useDispatch, useSelector } from "react-redux";
+import { selectProject } from "../redux/selector";
+import { loadProject } from "../redux/features/actions/project";
 
 const Project = () => {
-  const [data, setData] = useState();
+  const [dataProject, setDataProject] = useState([]);
   const [initData, setInitData] = useState();
+  const [limit, setLimit] = useState(2);
+
+  const dispatch = useDispatch();
+
+  const { data, loading } = useSelector(selectProject);
 
   useEffect(() => {
     const getProject = async () => {
-      const project = await fetchAllProject();
-      setData(project);
-      setInitData(project);
+      dispatch(loadProject());
+      setDataProject(data);
     };
-    getProject();
-  }, []);
 
-  return data ? (
+    getProject();
+  }, [dispatch]);
+
+  return data && loading === false ? (
     <main className="app-main-container app-project-main">
       <TitlePage title={"Projects"} />
       <HeaderMain Title={"Projects"} />
-      <SearchProject setData={setData} initData={initData} />
+      <SearchProject setData={dataProject} initData={initData} />
 
       <section className="app-project-section">
-        {data.length ? (
-          data
-            .sort((a, b) => new Date(b._createdAt) - new Date(a._createdAt))
-            .map((element, index) => (
+        {data && loading === false
+          ? dataProject.map((element, index) => (
               <ArticleProject data={element} key={index} />
             ))
-        ) : (
-          <div>project not found</div>
-        )}
+          : ""}
       </section>
     </main>
   ) : (

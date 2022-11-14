@@ -1,11 +1,13 @@
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
 import themeReducer from "./features/reducers/theme";
+import projectReducer from "./features/reducers/project";
 import storage from "redux-persist/lib/storage/";
 import thunk from "redux-thunk";
 import { persistReducer } from "redux-persist";
 
 const reducers = combineReducers({
   theme: themeReducer,
+  project: projectReducer,
 });
 
 const persistConfig = {

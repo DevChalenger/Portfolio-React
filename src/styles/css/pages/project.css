@@ -149,10 +149,6 @@
     justify-content: center;
     width: 100%;
   }
-  .app-project-article .app-project-article-preview-container {
-    width: 100%;
-    display: flex;
-  }
 }
 .app-search-project-container {
   display: flex;
@@ -185,12 +181,18 @@
 
 .app-project-main {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .app-project-main .app-project-section {
   width: 100%;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(400px, 2fr));
-  gap: 4em;
+  display: flex;
+  flex-wrap: wrap;
+  --columns: 2;
+  gap: 10em;
+  justify-content: center;
+  max-width: 1000px;
 }
 
 @media screen and (max-width: 500px) {
