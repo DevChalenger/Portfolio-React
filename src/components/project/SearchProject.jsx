@@ -1,10 +1,11 @@
-const SearchProject = ({ setData, initData }) => {
+const SearchProject = ({ setData, initData, dataProject }) => {
   const handleChange = (e) => {
     const eventTarget = e.target.value;
     const search = initData.filter((project) =>
       project._title.toLowerCase().includes(eventTarget.toLowerCase())
     );
     eventTarget.length > 0 ? setData(search) : setData(initData);
+    console.log(dataProject.length);
   };
 
   return (

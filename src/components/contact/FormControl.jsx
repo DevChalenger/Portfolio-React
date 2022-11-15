@@ -12,7 +12,7 @@ const FormControl = ({
         htmlFor={`app-contact-form-field-${name}`}
         className="app-contact-form-field-label"
       >
-        {label} :
+        {label}
       </label>
       <input
         type="text"

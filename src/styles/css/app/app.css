@@ -146,6 +146,11 @@
   background-color: #1e1e1e;
 }
 
+@media screen and (max-width: 1024px) {
+  * {
+    cursor: inherit;
+  }
+}
 @media screen and (max-width: 800px) {
   .app-container .app-main-container {
     padding-top: 175px;

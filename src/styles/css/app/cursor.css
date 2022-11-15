@@ -28,3 +28,9 @@
 .app-cursor .app-cursor-center.night {
   background-color: #dcdcdc;
 }
+
+@media screen and (max-width: 1024px) {
+  .app-cursor {
+    display: none;
+  }
+}

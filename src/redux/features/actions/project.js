@@ -10,6 +10,12 @@ const instance = axios.create({
 
 export const loadProject = () => {
   return async (dispatch, getState) => {
+    const status = selectProject(getState()).status;
+    if (status === PENDING) {
+      return setTimeout(() => {
+        dispatch(rejected());
+      }, 5000);
+    }
     dispatch(pending());
     try {
       const data = await instance.get("/project/");

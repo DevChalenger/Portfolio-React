@@ -1,4 +1,4 @@
-const ArticleProject = ({ data, setLightBox }) => {
+const ArticleProject = ({ data }) => {
   const today = new Date(data._createdAt)
     .toLocaleDateString("en-En")
     .slice(0, 10);

@@ -1,9 +1,10 @@
 .app-contact-form {
-  padding: 1.5em;
+  padding: 2em;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.5em;
+  gap: 1em;
+  width: 300px;
   background-color: white;
   color: #1e1e1e;
   box-shadow: 0 0 3px 0.1px;
@@ -14,24 +15,24 @@
   flex-direction: column;
   width: auto;
   gap: 0.5em;
-  max-width: 230px;
-  min-width: 200px;
+  width: 100%;
 }
 .app-contact-form .app-contact-form-field-container .app-contact-form-field-label {
   font-weight: bold;
-  text-align: right;
+  font-size: 20px;
+  text-align: center;
 }
 .app-contact-form .app-contact-form-field-container .app-contact-form-field-input {
   height: 30px;
   padding-left: 0.75em;
-  width: 220px;
 }
 .app-contact-form .app-contact-form-field-container .app-contact-form-field-textarea {
   padding: 0.75em;
-  max-width: 220px;
-  min-width: 220px;
   min-height: 50px;
   letter-spacing: 1px;
+  max-width: 100%;
+  min-width: 230px;
+  max-height: 400px;
   line-height: 1.5;
 }
 .app-contact-form .app-contact-form-field-container .app-contact-form-field-textarea,
@@ -42,17 +43,22 @@
   box-shadow: 0 0 3px 0.1px;
   transition: box-shadow 0.5s;
 }
+.app-contact-form .app-contact-form-field-container .app-contact-form-field-textarea:focus,
+.app-contact-form .app-contact-form-field-container .app-contact-form-field-input:focus {
+  box-shadow: 0 0 5px 2px #4a88c9;
+}
 .app-contact-form .app-contact-form-field-container .app-contact-form-field-textarea.notValidate,
 .app-contact-form .app-contact-form-field-container .app-contact-form-field-input.notValidate {
-  box-shadow: 0 0 4px 2px #f43333;
+  box-shadow: 0 0 5px 2px #f43333;
 }
 .app-contact-form .app-contact-form-field-container .app-contact-form-field-textarea.validate,
 .app-contact-form .app-contact-form-field-container .app-contact-form-field-input.validate {
-  box-shadow: 0 0 4px 2px #3fd973;
+  box-shadow: 0 0 5px 2px #3fd973;
 }
 .app-contact-form .app-contact-form-field-container .app-contact-form-field-error {
   color: #f43333;
   font-weight: bold;
+  text-align: center;
 }
 .app-contact-form .app-contact-form-button-container {
   margin-top: 1em;

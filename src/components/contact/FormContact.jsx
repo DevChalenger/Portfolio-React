@@ -72,7 +72,7 @@ const ContactForm = ({ setIsSent }) => {
           htmlFor="app-contact-form-field-message"
           className="app-contact-form-field-label"
         >
-          Message :
+          Message
         </label>
         <textarea
           name="message"

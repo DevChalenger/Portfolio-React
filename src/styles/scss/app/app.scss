@@ -10,6 +10,8 @@
   cursor: none;
 }
 
+html {
+}
 .app-container {
   min-height: 100vh;
   font-family: Cormorant;
@@ -19,6 +21,7 @@
   gap: 1em;
   position: relative;
   width: 100%;
+
   .app-main-container {
     padding-top: 100px;
     margin: 1em 2em;
@@ -59,6 +62,11 @@
   transition: background-color, color 0.5s;
   &::after {
     background-color: $First-Color;
+  }
+}
+@media screen and (max-width: 1024px) {
+  * {
+    cursor: inherit;
   }
 }
 @media screen and (max-width: 800px) {

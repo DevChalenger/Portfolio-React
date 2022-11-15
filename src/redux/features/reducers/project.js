@@ -4,7 +4,6 @@ import { statusReducer } from "./status";
 const initialState = {
   status: "void",
   data: [],
-  error: null,
   loading: true,
 };
 
