@@ -11,6 +11,16 @@
 }
 
 html {
+  ::-webkit-scrollbar {
+    width: 8px;
+    background-color: rgb(200, 200, 200);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(to left, $Second-Color, $First-Color);
+    border-radius: 2px;
+    position: relative;
+    left: -20px;
+  }
 }
 .app-container {
   min-height: 100vh;
@@ -20,7 +30,6 @@ html {
   flex-direction: column;
   gap: 1em;
   position: relative;
-  width: 100%;
 
   .app-main-container {
     padding-top: 100px;

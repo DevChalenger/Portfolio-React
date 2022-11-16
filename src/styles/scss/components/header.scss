@@ -1,7 +1,13 @@
+@import "../app/color.scss";
+
 .app-header {
   display: flex;
   position: fixed;
-
+  background-image: radial-gradient(
+    circle at left,
+    rgba($color: $First-Color, $alpha: 0.2) 50%,
+    rgba($color: $Second-Color, $alpha: 0.2)
+  );
   width: 100%;
   z-index: 1;
   justify-content: space-between;

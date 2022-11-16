@@ -31,9 +31,12 @@
   margin-bottom: 0;
   height: 200px;
   box-shadow: 0 0 5px 1px;
+  object-fit: cover;
+  object-position: center;
 }
 .app-project-article .app-project-article-preview-container .app-project-article-preview {
-  width: 100%;
+  max-width: 400px;
+  min-height: 100%;
 }
 .app-project-article .app-project-article-information {
   padding: 1em;

@@ -1,3 +1,5 @@
+@import "../app/color.scss";
+
 .app-footer {
   margin-top: auto;
   display: flex;
@@ -6,6 +8,11 @@
   gap: 0.5em;
   padding: 1.5em 2em;
   box-shadow: 0px -2em 5px -2em;
+  background-image: radial-gradient(
+    circle at right,
+    rgba($color: $First-Color, $alpha: 0.2) 50%,
+    rgba($color: $Second-Color, $alpha: 0.2)
+  );
   p {
     margin: 0;
   }
