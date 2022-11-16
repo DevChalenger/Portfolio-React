@@ -5,7 +5,7 @@ import { PENDING } from "../reducers/status";
 import axios from "axios";
 
 const instance = axios.create({
-  baseURL: "http://localhost:8800/api",
+  baseURL: "https://devchalenger-portfolio-backend.onrender.com/api",
 });
 
 export const loadProject = () => {
@@ -18,7 +18,7 @@ export const loadProject = () => {
     }
     dispatch(pending());
     try {
-      const data = await instance.get("/project/");
+      const data = await instance.get("/project");
       dispatch(resolved(data.data));
     } catch (error) {
       dispatch(rejected(error));

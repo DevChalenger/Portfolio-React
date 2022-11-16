@@ -43,29 +43,30 @@ const Project = () => {
     <main className="app-main-container app-project-main">
       <TitlePage title={"Projects"} />
       <HeaderMain Title={"Projects"} />
-      {data && loading === false ? (
-        <InfiniteScroll
-          className="app-project-section"
-          element={"section"}
-          loadMore={loadMore}
-          hasMore={hasMore}
-          useWindow={true}
-          threshold={-20}
-          loader={
-            <div className="app-project-section-loader-container" key={0.5}>
+
+      <InfiniteScroll
+        className="app-project-section"
+        element={"section"}
+        loadMore={loadMore}
+        hasMore={hasMore}
+        useWindow={true}
+        threshold={-20}
+        loader={
+          <div className="app-project-section-loader-container" key={0.5}>
+            {data.length > perPage ? (
               <div className="app-project-section-loader">
                 <p>Loading ...</p>
               </div>
-            </div>
-          }
-        >
-          {data.slice(0, perPage).map((project, index) => (
-            <ArticleProject data={project} key={index} />
-          ))}
-        </InfiniteScroll>
-      ) : (
-        ""
-      )}
+            ) : (
+              ""
+            )}
+          </div>
+        }
+      >
+        {data.slice(0, perPage).map((project, index) => (
+          <ArticleProject data={project} key={index} />
+        ))}
+      </InfiniteScroll>
     </main>
   ) : status === "pending" ? (
     <Loader type={"projects"} />
