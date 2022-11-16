@@ -24,7 +24,7 @@ const ArticleProject = ({ data }) => {
             target="_blank"
             rel="noreferrer"
           >
-            Link to the project
+            Github Repositorie
           </a>
         </p>
         <ul className="app-project-article-programming-language-list">

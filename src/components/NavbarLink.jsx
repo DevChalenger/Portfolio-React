@@ -1,13 +1,11 @@
 import { Link, useLocation } from "react-router-dom";
-import useTheme from "../utils/Theme";
 
 const NavbarLink = ({ name, path }) => {
-  const { currentTheme } = useTheme();
   const currentPath = useLocation().pathname;
 
   return (
     <li
-      className={`app-header-nav-item ${currentTheme} ${
+      className={`app-header-nav-item  ${
         currentPath === path ? "current-page" : ""
       }`}
     >

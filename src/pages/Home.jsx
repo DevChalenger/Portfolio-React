@@ -13,6 +13,7 @@ const Home = () => {
       <HeaderMain Title={"Home"} />
       <IntroductionHome />
       <InterestHome />
+      <PreviewProjectHome />
     </main>
   );
 };

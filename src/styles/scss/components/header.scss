@@ -4,8 +4,8 @@
   display: flex;
   position: fixed;
   background-image: radial-gradient(
-    circle at left,
-    rgba($color: $First-Color, $alpha: 0.2) 50%,
+    circle at top left,
+    rgba($color: $First-Color, $alpha: 0.2) 40%,
     rgba($color: $Second-Color, $alpha: 0.2)
   );
   width: 100%;
@@ -56,6 +56,7 @@
           content: "";
           position: absolute;
           width: 100%;
+          background-color: currentColor;
           transform: scaleX(0);
           height: 1.5px;
           bottom: 0;

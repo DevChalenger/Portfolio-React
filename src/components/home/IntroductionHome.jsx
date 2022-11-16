@@ -1,11 +1,8 @@
 const IntroductionHome = () => {
   return (
     <section className="app-home-section app-home-section-introduction">
-      <h2 className="app-home-section-title">Who am i ?</h2>
-      <p>
-        I am Ilyas Boukhechem and i am a Software frontend developper
-        specializing in React from France
-      </p>
+      <h2 className="app-home-section-title">Hi, i am Ilyas Boukhechem ?</h2>
+      <p>I am a passionate frontend developer</p>
     </section>
   );
 };

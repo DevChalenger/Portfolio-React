@@ -16,7 +16,6 @@
   border-radius: 0.5em;
   overflow: hidden;
   justify-self: center;
-  background-color: rgba(255, 255, 255, 0.15);
   transition: transform 0.5s ease;
   animation: appearProject 0.75s ease-in-out;
 }
@@ -65,30 +64,21 @@
 }
 .app-project-article .app-project-article-information .app-project-article-link-text {
   font-style: italic;
-}
-.app-project-article .app-project-article-information .app-project-article-link-text:active {
+  display: flex;
+  justify-content: center;
   font-weight: bold;
 }
 .app-project-article .app-project-article-information .app-project-article-link-text .app-project-article-link {
   position: relative;
+  border-radius: 0.25em;
+  padding: 0.2em 1em;
+  box-shadow: 0 0 5px 1px;
   font-size: 20px;
   margin-bottom: auto;
+  transition: transform 0.5s;
 }
-.app-project-article .app-project-article-information .app-project-article-link-text .app-project-article-link:hover::after {
-  transform: scaleX(1);
-  transform-origin: bottom left;
-}
-.app-project-article .app-project-article-information .app-project-article-link-text .app-project-article-link::after {
-  content: "";
-  background-color: gray;
-  position: absolute;
-  width: 100%;
-  transform: scaleX(0);
-  height: 1.5px;
-  bottom: 0;
-  left: 0;
-  transform-origin: bottom right;
-  transition: transform 0.25s ease-out;
+.app-project-article .app-project-article-information .app-project-article-link-text .app-project-article-link:hover {
+  transform: scale(1.1);
 }
 .app-project-article .app-project-article-information .app-project-article-description {
   margin: 0;
@@ -182,12 +172,6 @@
   box-shadow: 0 0 7.5px 3px #4a88c9;
 }
 
-.app-project-main {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
 .app-project-main .app-project-section {
   margin: 3em 0em;
   width: 100%;
@@ -209,7 +193,6 @@
   padding: 0.2em 2em;
   display: inline-block;
   border-radius: 0.25em;
-  box-shadow: 0px 0px 4px 2px;
   font-size: 20px;
 }
 .app-project-main .app-project-section .app-project-section-loader-container .app-project-section-loader p {
@@ -221,8 +204,6 @@
     margin: 1em 1em !important;
   }
   .app-project-main .app-project-section {
-    gap: 2em;
-    display: flex;
     flex-direction: column;
     align-items: center;
   }

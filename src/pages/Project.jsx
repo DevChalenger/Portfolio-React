@@ -1,4 +1,4 @@
-import { useEffect, useState, useCallback } from "react";
+import { useState } from "react";
 import HeaderMain from "../components/HeaderMain";
 
 import Loader from "../components/Loader";
@@ -7,17 +7,16 @@ import ArticleProject from "../components/project/ArticleProject";
 import "../styles/css/pages/project.css";
 import TitlePage from "../utils/TitlePage";
 
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import { selectProject } from "../redux/selector";
-import { loadProject } from "../redux/features/actions/project";
 
 import InfiniteScroll from "react-infinite-scroller";
+import { useEffect } from "react";
 
 const Project = () => {
   const [hasMore, setHasMore] = useState(true);
   const [perPage, setPerPage] = useState(2);
-
-  const dispatch = useDispatch();
+  const [isLoading, setIsLoading] = useState(true);
 
   const { data, loading, status } = useSelector(selectProject);
 
@@ -31,49 +30,50 @@ const Project = () => {
     }
   };
 
-  const getProject = useCallback(() => {
-    dispatch(loadProject());
-  }, [dispatch]);
-
   useEffect(() => {
-    getProject();
-  }, [getProject]);
+    if (loading === true) {
+      setIsLoading(true);
+    } else {
+      setIsLoading(false);
+    }
+  }, [loading]);
 
-  return status === "resolved" && loading === false ? (
+  return (
     <main className="app-main-container app-project-main">
       <TitlePage title={"Projects"} />
       <HeaderMain Title={"Projects"} />
-
-      <InfiniteScroll
-        className="app-project-section"
-        element={"section"}
-        loadMore={loadMore}
-        hasMore={hasMore}
-        useWindow={true}
-        threshold={-20}
-        loader={
-          <div className="app-project-section-loader-container" key={0.5}>
-            {data.length > perPage ? (
-              <div className="app-project-section-loader">
-                <p>Loading ...</p>
-              </div>
-            ) : (
-              ""
-            )}
-          </div>
-        }
-      >
-        {data.slice(0, perPage).map((project, index) => (
-          <ArticleProject data={project} key={index} />
-        ))}
-      </InfiniteScroll>
+      {status === "resolved" ? (
+        <InfiniteScroll
+          className="app-project-section"
+          element={"section"}
+          loadMore={loadMore}
+          hasMore={hasMore}
+          useWindow={true}
+          threshold={-20}
+          loader={
+            <div className="app-project-section-loader-container" key={0.5}>
+              {data.length > perPage ? (
+                <div className="app-project-section-loader">
+                  <p>Loading ...</p>
+                </div>
+              ) : (
+                ""
+              )}
+            </div>
+          }
+        >
+          {data.slice(0, perPage).map((project, index) => (
+            <ArticleProject data={project} key={index} />
+          ))}
+        </InfiniteScroll>
+      ) : status === "pending" ? (
+        <Loader type={"projects"} />
+      ) : status === "rejected" ? (
+        <div style={{ marginTop: 500 }}>sorry error server</div>
+      ) : (
+        ""
+      )}
     </main>
-  ) : status === "pending" ? (
-    <Loader type={"projects"} />
-  ) : status === "rejected" ? (
-    <div style={{ marginTop: 500 }}>sorry error server</div>
-  ) : (
-    ""
   );
 };
 

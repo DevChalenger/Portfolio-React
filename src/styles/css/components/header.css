@@ -1,7 +1,7 @@
 .app-header {
   display: flex;
   position: fixed;
-  background-image: radial-gradient(circle at left, rgba(30, 30, 30, 0.2) 50%, rgba(220, 220, 220, 0.2));
+  background-image: radial-gradient(circle at top left, rgba(30, 30, 30, 0.2) 40%, rgba(220, 220, 220, 0.2));
   width: 100%;
   z-index: 1;
   justify-content: space-between;
@@ -50,6 +50,7 @@
   content: "";
   position: absolute;
   width: 100%;
+  background-color: currentColor;
   transform: scaleX(0);
   height: 1.5px;
   bottom: 0;

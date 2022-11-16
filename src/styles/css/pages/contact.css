@@ -4,11 +4,12 @@
   flex-direction: column;
   align-items: center;
   gap: 1em;
-  width: 300px;
+  max-width: 300px;
+  width: 100%;
   background-color: white;
   color: #1e1e1e;
   box-shadow: 0 0 3px 0.1px;
-  border-radius: 0.5em;
+  border-radius: 0.25em;
 }
 .app-contact-form .app-contact-form-field-container {
   display: flex;
@@ -30,9 +31,10 @@
   padding: 0.75em;
   min-height: 50px;
   letter-spacing: 1px;
+  width: 100%;
   max-width: 100%;
-  min-width: 230px;
-  max-height: 400px;
+  min-width: 100%;
+  max-height: 200px;
   line-height: 1.5;
 }
 .app-contact-form .app-contact-form-field-container .app-contact-form-field-textarea,
