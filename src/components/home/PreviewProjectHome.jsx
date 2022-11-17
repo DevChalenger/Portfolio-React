@@ -8,10 +8,11 @@ import ArticleProject from "../project/ArticleProject";
 const PreviewProjectHome = () => {
   const { data, status } = useSelector(selectProject);
   const navigate = useNavigate();
+
   return (
     <section className="app-home-section">
       <header className="app-home-section-header">
-        <h2 className="app-home-section-title">My recent Project</h2>
+        <h2 className="app-home-section-title">Here is my recent Project</h2>
         <Programming className="app-home-section-header-icon" />
       </header>
 

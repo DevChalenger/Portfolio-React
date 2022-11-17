@@ -1,1 +1,22 @@
+.app-home-project-section-container {
+  position: relative;
+  display: flex;
+  min-height: 200px;
+  gap: 5em;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
 
+.app-home-project-link-more {
+  padding: 0.66em 1em;
+  margin: 4em auto;
+  align-self: center;
+  max-width: 500px;
+  min-width: 200px;
+  border-radius: 2em;
+  box-shadow: 0 0 5px 1px;
+  transition: transform 0.5s;
+}
+.app-home-project-link-more:hover {
+  transform: scale(1.1);
+}

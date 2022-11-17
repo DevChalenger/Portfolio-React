@@ -97,17 +97,6 @@
   cursor: none;
 }
 
-html ::-webkit-scrollbar {
-  width: 8px;
-  background-color: rgb(200, 200, 200);
-}
-html ::-webkit-scrollbar-thumb {
-  background: linear-gradient(to left, #dcdcdc, #1e1e1e);
-  border-radius: 2px;
-  position: relative;
-  left: -20px;
-}
-
 .app-container {
   min-height: 100vh;
   font-family: Cormorant;
@@ -119,7 +108,7 @@ html ::-webkit-scrollbar-thumb {
 }
 .app-container .app-main-container {
   padding-top: 100px;
-  margin: 1em 2em;
+  margin: 1em 1em;
   display: flex;
   flex-direction: column;
   align-items: center;

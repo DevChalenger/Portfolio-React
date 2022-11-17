@@ -1,12 +1,15 @@
 @import "../components/home/introduction.scss";
+@import "../components/home/previewProject.scss";
+@import "../components/home/skillsHome.scss";
 
 .app-home-main {
   .app-home-section {
-    padding: 1em 0 1em 0;
+    padding: 2em 0 2em 0;
     box-shadow: 0px 0.5em 5px -0.5em;
     width: 100%;
     text-align: center;
-    padding: 1em 1em;
+    margin-bottom: 2em;
+
     .app-home-section-header {
       font-size: 1.5em;
       position: relative;
@@ -14,18 +17,19 @@
       justify-content: center;
       align-items: center;
       flex-direction: column;
-      box-shadow: 0px 2em 5px -2em;
+      width: 100%;
       gap: 0.5em;
-      margin-bottom: 5em;
+      margin-bottom: 3em;
       &::after {
         content: "";
         position: absolute;
-        width: 150%;
+        width: 100%;
+        max-width: 400px;
         height: 2px;
         opacity: 0.5;
         background-color: currentColor;
-        bottom: -10px;
-        left: -25%;
+        bottom: -25px;
+        left: calc(50% - 200px);
         transform-origin: bottom right;
         transition: transform 0.25s ease-out;
       }
@@ -42,30 +46,22 @@
         height: 50px;
       }
     }
-    .app-home-project-section-container {
-      position: relative;
-      display: flex;
-      gap: 5em;
-      justify-content: space-evenly;
-      flex-wrap: wrap;
-    }
-    .app-home-project-link-more {
-      padding: 0.66em 1em;
-      margin: auto auto;
-      margin-top: 5em;
-      align-self: center;
-      max-width: 500px;
-      min-width: 200px;
-      border-radius: 2em;
-      box-shadow: 0 0 5px 1px;
-      transition: 0.5s;
-      &:hover {
-        transform: scale(1.1);
-      }
-    }
+
     &:nth-last-child(-n + 1) {
       box-shadow: 0 0 0 0;
       padding-bottom: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .app-home-main {
+    .app-home-section {
+      .app-home-section-header {
+        &::after {
+          left: 0%;
+        }
+      }
     }
   }
 }

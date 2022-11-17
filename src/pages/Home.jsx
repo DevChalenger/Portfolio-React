@@ -3,8 +3,9 @@ import PreviewProjectHome from "../components/home/PreviewProjectHome";
 import HeaderMain from "../components/HeaderMain";
 
 import "../styles/css/pages/home.css";
-import InterestHome from "../components/home/InterestHome";
+import HobbyHome from "../components/home/HobbyHome";
 import TitlePage from "../utils/TitlePage";
+import SkillsHome from "../components/home/SkillsHome";
 
 const Home = () => {
   return (
@@ -12,8 +13,10 @@ const Home = () => {
       <TitlePage title={"Home"} />
       <HeaderMain Title={"Home"} />
       <IntroductionHome />
-      <InterestHome />
+
       <PreviewProjectHome />
+      <SkillsHome />
+      <HobbyHome />
     </main>
   );
 };
