@@ -11,7 +11,7 @@ const InterestHome = () => {
       </header>
       <section className="app-home-hobby-carousel-container">
         {data.map((hobby, index) => (
-          <Carousel data={hobby} key={index} />
+          <Carousel carouselData={hobby} key={index} />
         ))}
       </section>
     </section>

@@ -108,6 +108,7 @@
 }
 .app-container .app-main-container {
   padding-top: 100px;
+  min-height: 500px;
   margin: 1em 1em;
   display: flex;
   flex-direction: column;

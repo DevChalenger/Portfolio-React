@@ -9,7 +9,7 @@
   box-shadow: 0 0 5px 1px #1e1e1e;
   transform: translate(-50%, -50%);
   transition: width 0.5s, height 0.5s;
-  z-index: 10;
+  z-index: 1000;
   pointer-events: none;
   display: flex;
   justify-content: center;

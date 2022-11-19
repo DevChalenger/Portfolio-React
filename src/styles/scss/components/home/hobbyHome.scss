@@ -1,0 +1,124 @@
+@import "../../app/color.scss";
+
+.app-home-hobby-carousel-container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1500px;
+  margin: auto;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 0 0.5em;
+  gap: 2em 1em;
+  .app-home-hobby-caroussel-article {
+    position: relative;
+    max-width: 600px;
+
+    width: 100%;
+    border-radius: 0.25em;
+    .app-home-hobby-caroussel-slider {
+      height: 300px;
+      position: relative;
+      border-radius: 0.5em;
+      box-shadow: 0 0 5px 0.1px currentColor;
+      overflow: hidden;
+      &:hover {
+        .app-home-hobby-carousel-information {
+          scale: 1.1;
+        }
+      }
+      .app-home-hobby-caroussel-button-container {
+        position: absolute;
+        width: 100%;
+        top: 50%;
+        transform: translate(0, -50%);
+        display: flex;
+        justify-content: space-between;
+        z-index: 2;
+        padding: 1em;
+        .app-home-hobby-caroussel-button-icon {
+          height: 40px;
+          width: 40px;
+          padding: 0.5em;
+          background-color: rgba($color: $First-Color, $alpha: 0.75);
+          color: $Second-Color;
+          border-radius: 100%;
+          &.previous {
+            transform: rotate(90deg);
+          }
+          &.next {
+            transform: rotate(270deg);
+          }
+        }
+      }
+      .app-home-hobby-carousel-information {
+        position: absolute;
+        top: 0;
+        transition: 0.75s opacity ease-in-out, 0.5s scale ease-in-out;
+
+        &.active {
+          opacity: 1;
+          z-index: 1;
+        }
+        &.inactive {
+          opacity: 0;
+          scale: 1.5;
+        }
+        .app-home-hobby-caroussel-name {
+          position: absolute;
+          margin: 0;
+          padding: 0.5em 2em;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          background-color: rgba($color: $First-Color, $alpha: 0.75);
+          border-radius: 0.5em;
+          color: $Second-Color;
+          z-index: 1;
+        }
+        .app-home-hobby-caroussel-picture-container {
+          position: relative;
+          height: 300px;
+
+          .app-home-hobby-caroussel-picture {
+            object-fit: cover;
+            width: 100%;
+            height: 120%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  .app-home-hobby-carousel-container {
+    .app-home-hobby-caroussel-article {
+      .app-home-hobby-caroussel-slider {
+        height: 250px;
+        .app-home-hobby-carousel-information {
+          .app-home-hobby-caroussel-picture-container {
+            height: 250px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  .app-home-hobby-carousel-container {
+    .app-home-hobby-caroussel-article {
+      .app-home-hobby-caroussel-slider {
+        height: 200px;
+        .app-home-hobby-carousel-information {
+          .app-home-hobby-caroussel-name {
+            padding: 0.5em 1em;
+          }
+          .app-home-hobby-caroussel-picture-container {
+            height: 200px;
+          }
+        }
+      }
+    }
+  }
+}

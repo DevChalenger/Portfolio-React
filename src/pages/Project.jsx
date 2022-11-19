@@ -14,7 +14,7 @@ import InfiniteScroll from "react-infinite-scroller";
 
 const Project = () => {
   const [hasMore, setHasMore] = useState(true);
-  const [perPage, setPerPage] = useState(2);
+  const [perPage, setPerPage] = useState(4);
 
   const { data, status } = useSelector(selectProject);
 

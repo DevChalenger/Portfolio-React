@@ -14,7 +14,7 @@ export const loadProject = () => {
     if (status === PENDING) {
       return setTimeout(() => {
         dispatch(rejected());
-      }, 10000);
+      }, 20000);
     }
     dispatch(pending());
     try {
