@@ -45,7 +45,7 @@
   justify-content: center;
   gap: 2em 1em;
   min-width: 500px;
-  width: 100%;
+  width: auto;
   border-radius: 0.75em;
 }
 .app-home-skills-container .app-home-skills-list .app-home-skills-item {
@@ -81,6 +81,18 @@
   }
   .app-home-skills-container .app-home-skills-list {
     min-width: 200px;
+    width: 100%;
+  }
+}
+@keyframes btnClickAnim {
+  0% {
+    background-color: rgba(30, 30, 30, 0.75);
+  }
+  50% {
+    background-color: rgba(100, 100, 100, 0.5);
+  }
+  100% {
+    background-color: rgba(30, 30, 30, 0.75);
   }
 }
 .app-home-hobby-carousel-container {
@@ -91,7 +103,28 @@
   align-items: center;
   justify-content: space-evenly;
   padding: 0 0.5em;
-  gap: 2em 1em;
+  gap: 2em 3em;
+}
+.app-home-hobby-carousel-container .app-home-hobby-caroussel-header {
+  margin-bottom: 2em;
+}
+.app-home-hobby-carousel-container .app-home-hobby-caroussel-header .app-home-hobby-caroussel-title {
+  position: relative;
+  font-size: 25px;
+  font-weight: bold;
+  font-style: italic;
+}
+.app-home-hobby-carousel-container .app-home-hobby-caroussel-header .app-home-hobby-caroussel-title::after {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  background-color: currentColor;
+  opacity: 0.5;
+  border-radius: 100%;
+  box-shadow: 0 0 3px 1px currentColor;
+  bottom: -0.5em;
+  left: 0;
 }
 .app-home-hobby-carousel-container .app-home-hobby-caroussel-article {
   position: relative;
@@ -102,7 +135,7 @@
 .app-home-hobby-carousel-container .app-home-hobby-caroussel-article .app-home-hobby-caroussel-slider {
   height: 300px;
   position: relative;
-  border-radius: 0.5em;
+  border-radius: 0.25em;
   box-shadow: 0 0 5px 0.1px currentColor;
   overflow: hidden;
 }
@@ -126,6 +159,13 @@
   background-color: rgba(30, 30, 30, 0.75);
   color: #dcdcdc;
   border-radius: 100%;
+  transition: scale 1s;
+}
+.app-home-hobby-carousel-container .app-home-hobby-caroussel-article .app-home-hobby-caroussel-slider .app-home-hobby-caroussel-button-container .app-home-hobby-caroussel-button-icon:hover {
+  scale: 1.2;
+}
+.app-home-hobby-carousel-container .app-home-hobby-caroussel-article .app-home-hobby-caroussel-slider .app-home-hobby-caroussel-button-container .app-home-hobby-caroussel-button-icon.isClicked {
+  animation: btnClickAnim 0.5s ease-out;
 }
 .app-home-hobby-carousel-container .app-home-hobby-caroussel-article .app-home-hobby-caroussel-slider .app-home-hobby-caroussel-button-container .app-home-hobby-caroussel-button-icon.previous {
   transform: rotate(90deg);
@@ -154,7 +194,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: rgba(30, 30, 30, 0.75);
-  border-radius: 0.5em;
+  border-radius: 0.25em;
   color: #dcdcdc;
   z-index: 1;
 }

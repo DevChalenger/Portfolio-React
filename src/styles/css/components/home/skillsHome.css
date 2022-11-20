@@ -22,7 +22,7 @@
   justify-content: center;
   gap: 2em 1em;
   min-width: 500px;
-  width: 100%;
+  width: auto;
   border-radius: 0.75em;
 }
 .app-home-skills-container .app-home-skills-list .app-home-skills-item {
@@ -58,5 +58,6 @@
   }
   .app-home-skills-container .app-home-skills-list {
     min-width: 200px;
+    width: 100%;
   }
 }

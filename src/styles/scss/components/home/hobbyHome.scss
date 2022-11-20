@@ -1,5 +1,18 @@
 @import "../../app/color.scss";
 
+@keyframes btnClickAnim {
+  0% {
+    background-color: rgba($color: $First-Color, $alpha: 0.75);
+  }
+  50% {
+    background-color: rgba($color: rgb(100, 100, 100), $alpha: 0.5);
+  }
+
+  100% {
+    background-color: rgba($color: $First-Color, $alpha: 0.75);
+  }
+}
+
 .app-home-hobby-carousel-container {
   display: flex;
   flex-wrap: wrap;
@@ -8,17 +21,37 @@
   align-items: center;
   justify-content: space-evenly;
   padding: 0 0.5em;
-  gap: 2em 1em;
+  gap: 2em 3em;
+  .app-home-hobby-caroussel-header {
+    margin-bottom: 2em;
+    .app-home-hobby-caroussel-title {
+      position: relative;
+      font-size: 25px;
+      font-weight: bold;
+      font-style: italic;
+      &::after {
+        content: "";
+        position: absolute;
+        height: 1px;
+        width: 100%;
+        background-color: currentColor;
+        opacity: 0.5;
+        border-radius: 100%;
+        box-shadow: 0 0 3px 1px currentColor;
+        bottom: -0.5em;
+        left: 0;
+      }
+    }
+  }
   .app-home-hobby-caroussel-article {
     position: relative;
     max-width: 600px;
-
     width: 100%;
     border-radius: 0.25em;
     .app-home-hobby-caroussel-slider {
       height: 300px;
       position: relative;
-      border-radius: 0.5em;
+      border-radius: 0.25em;
       box-shadow: 0 0 5px 0.1px currentColor;
       overflow: hidden;
       &:hover {
@@ -42,6 +75,13 @@
           background-color: rgba($color: $First-Color, $alpha: 0.75);
           color: $Second-Color;
           border-radius: 100%;
+          transition: scale 1s;
+          &:hover {
+            scale: 1.2;
+          }
+          &.isClicked {
+            animation: btnClickAnim 0.5s ease-out;
+          }
           &.previous {
             transform: rotate(90deg);
           }
@@ -71,7 +111,7 @@
           left: 50%;
           transform: translate(-50%, -50%);
           background-color: rgba($color: $First-Color, $alpha: 0.75);
-          border-radius: 0.5em;
+          border-radius: 0.25em;
           color: $Second-Color;
           z-index: 1;
         }

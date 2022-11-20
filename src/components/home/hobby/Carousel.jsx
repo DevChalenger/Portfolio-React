@@ -1,24 +1,9 @@
 import { useState } from "react";
 import { ReactComponent as Arrow } from "../../../assets/SVG/arrow.svg";
+import ButtonCarouselHobby from "./ButtonCarouselHobby";
 
 const Carousel = ({ carouselData }) => {
   const [currentSlider, setCurrentSlider] = useState(0);
-
-  const previousSlider = () => {
-    if (currentSlider > 0) {
-      setCurrentSlider(currentSlider - 1);
-    } else {
-      setCurrentSlider(carouselData.data.length - 1);
-    }
-  };
-
-  const nextSlider = () => {
-    if (currentSlider === carouselData.data.length - 1) {
-      setCurrentSlider(0);
-    } else {
-      setCurrentSlider(currentSlider + 1);
-    }
-  };
 
   return (
     <article className="app-home-hobby-caroussel-article">
@@ -27,14 +12,17 @@ const Carousel = ({ carouselData }) => {
       </header>
       <div className="app-home-hobby-caroussel-slider">
         <div className="app-home-hobby-caroussel-button-container">
-          <Arrow
-            className="app-home-hobby-caroussel-button-icon previous"
-            onClick={previousSlider}
+          <ButtonCarouselHobby
+            isPrevious={true}
+            carouselData={carouselData}
+            currentSlider={currentSlider}
+            setCurrentSlider={setCurrentSlider}
           />
-
-          <Arrow
-            className="app-home-hobby-caroussel-button-icon next"
-            onClick={nextSlider}
+          <ButtonCarouselHobby
+            isPrevious={false}
+            carouselData={carouselData}
+            currentSlider={currentSlider}
+            setCurrentSlider={setCurrentSlider}
           />
         </div>
         {carouselData.data.map((hobby, index) => (
