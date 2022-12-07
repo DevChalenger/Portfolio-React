@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ReactComponent as Arrow } from "../../../assets/SVG/arrow.svg";
+
 import ButtonCarouselHobby from "./ButtonCarouselHobby";
 
 const Carousel = ({ carouselData }) => {
@@ -34,7 +34,7 @@ const Carousel = ({ carouselData }) => {
           >
             <div className="app-home-hobby-caroussel-picture-container">
               <img
-                src={hobby.img}
+                src={require(`../../../assets/home/hobby-picture/${hobby.img}.jpg`)}
                 alt={`${hobby.name}`}
                 className="app-home-hobby-caroussel-picture"
               />

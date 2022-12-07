@@ -1,13 +1,10 @@
 .app-loader-container {
   display: flex;
-
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  position: relative;
+  top: 40px;
   gap: 1.5em;
   word-break: normal;
   .app-loader-animation {

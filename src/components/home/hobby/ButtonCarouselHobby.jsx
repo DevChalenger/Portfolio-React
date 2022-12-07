@@ -34,7 +34,7 @@ const ButtonCarouselHobby = ({
       className={`app-home-hobby-caroussel-button-icon ${
         animButton ? "isClicked" : ""
       } previous`}
-      onClick={canBeClicked ? previousSlider : ""}
+      onClick={canBeClicked ? previousSlider : () => {}}
       onAnimationEnd={() => {
         setAnimButton(false);
         setCanBeClicked(true);
@@ -45,7 +45,7 @@ const ButtonCarouselHobby = ({
       className={`app-home-hobby-caroussel-button-icon ${
         animButton ? "isClicked" : ""
       } next`}
-      onClick={canBeClicked ? nextSlider : ""}
+      onClick={canBeClicked ? nextSlider : () => {}}
       onAnimationEnd={() => {
         setAnimButton(false);
         setCanBeClicked(true);

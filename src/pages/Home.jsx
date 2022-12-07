@@ -6,6 +6,7 @@ import "../styles/css/pages/home.css";
 import HobbyHome from "../components/home/HobbyHome";
 import TitlePage from "../utils/TitlePage";
 import SkillsHome from "../components/home/SkillsHome";
+import Resume from "../components/home/ResumeHome";
 
 const Home = () => {
   return (
@@ -13,10 +14,10 @@ const Home = () => {
       <TitlePage title={"Home"} />
       <HeaderMain Title={"Home"} />
       <IntroductionHome />
-
       <PreviewProjectHome />
       <SkillsHome />
       <HobbyHome />
+      <Resume />
     </main>
   );
 };

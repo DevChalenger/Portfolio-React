@@ -5,7 +5,7 @@
     background-color: rgba($color: $First-Color, $alpha: 0.75);
   }
   50% {
-    background-color: rgba($color: rgb(100, 100, 100), $alpha: 0.5);
+    background-color: rgba($color: rgb(75, 75, 75), $alpha: 0.5);
   }
 
   100% {
@@ -94,7 +94,7 @@
         position: absolute;
         top: 0;
         transition: 0.75s opacity ease-in-out, 0.5s scale ease-in-out;
-
+        width: 100%;
         &.active {
           opacity: 1;
           z-index: 1;

@@ -6,7 +6,7 @@ const InterestHome = () => {
   return (
     <section className="app-home-section">
       <header className="app-home-section-header">
-        <h2 className="app-home-section-title">Here is my hobby</h2>
+        <h2 className="app-home-section-title">Here is my Interest</h2>
         <Heart className="app-home-section-header-icon" />
       </header>
       <section className="app-home-hobby-carousel-container">

@@ -3,7 +3,7 @@
     background-color: rgba(30, 30, 30, 0.75);
   }
   50% {
-    background-color: rgba(100, 100, 100, 0.5);
+    background-color: rgba(75, 75, 75, 0.5);
   }
   100% {
     background-color: rgba(30, 30, 30, 0.75);
@@ -91,6 +91,7 @@
   position: absolute;
   top: 0;
   transition: 0.75s opacity ease-in-out, 0.5s scale ease-in-out;
+  width: 100%;
 }
 .app-home-hobby-carousel-container .app-home-hobby-caroussel-article .app-home-hobby-caroussel-slider .app-home-hobby-carousel-information.active {
   opacity: 1;

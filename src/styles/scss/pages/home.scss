@@ -1,16 +1,40 @@
 @import "../components/home/introduction.scss";
-@import "../components/home/previewProject.scss";
-@import "../components/home/skillsHome.scss";
-@import "../components/home/hobbyHome.scss";
+@import "../components/home/preview-project.scss";
+@import "../components/home/skills.scss";
+@import "../components/home/hobby.scss";
+@import "../components/home/resume.scss";
+
+@keyframes hello {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(15deg);
+  }
+  20% {
+    transform: rotate(-10deg);
+  }
+  30% {
+    transform: rotate(15deg);
+  }
+  40% {
+    transform: rotate(-5deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  60% {
+    transform: rotate(0deg);
+  }
+}
 
 .app-home-main {
   .app-home-section {
-    padding: 2em 0 2em 0;
+    padding: 2em 0;
     box-shadow: 0px 0.5em 5px -0.5em;
     width: 100%;
     text-align: center;
     margin-bottom: 2em;
-
     .app-home-section-header {
       font-size: 1.5em;
       position: relative;
@@ -34,7 +58,6 @@
         transform-origin: bottom right;
         transition: transform 0.25s ease-out;
       }
-
       .app-home-section-title {
         margin: 0;
         font-size: 32px;
@@ -45,6 +68,10 @@
       }
       .app-home-section-header-icon {
         height: 50px;
+        &.hello-animation {
+          height: 40px;
+          animation: hello 2s;
+        }
       }
     }
 

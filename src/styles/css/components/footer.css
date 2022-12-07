@@ -59,10 +59,10 @@
 
 @media screen and (max-width: 768.9px) {
   .app-footer {
-    flex-direction: column-reverse;
+    flex-direction: column;
     text-align: center;
   }
-  .app-footer .app-header-nav {
-    align-self: flex-end;
+  .app-footer .app-footer-social-list {
+    margin-left: 0;
   }
 }
